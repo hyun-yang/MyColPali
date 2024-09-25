@@ -1,0 +1,22 @@
+@startuml
+actor User
+participant VisionPresenter
+participant VisionView
+participant VisionModel
+participant ColPaliVLMModel
+participant Database
+
+User -> VisionView: submit_file(llm)
+VisionView -> VisionPresenter: submitted_file_signal
+VisionPresenter -> ColPaliVLMModel: indexing_files(args)
+ColPaliVLMModel -> VisionPresenter: file_index_finished_signal
+User -> VisionView: submit(text)
+VisionView -> VisionPresenter: submitted_prompt_signal
+VisionPresenter -> ColPaliVLMModel: get_colpali_search_result(image_result, image_size)
+VisionPresenter -> Database: add_human_vision(text, file_list)
+VisionPresenter -> VisionView: update_ui_submit(ChatType.HUMAN, text. file_list)
+VisionPresenter -> VisionModel: send_user_input(args, llm)
+VisionModel -> VisionPresenter: response_finished_signal
+VisionPresenter -> VisionView: update_ui_finish(model, finish_reason, elapsed_time, stream)
+VisionPresenter -> Database: insert_vision_detail(id, chat_type, model, text, elapsed_time, finish_reason)
+@enduml

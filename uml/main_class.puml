@@ -1,0 +1,68 @@
+@startuml
+class MainWindow {
+    - _vision
+    - _settings
+    - _database
+    - current_llm
+    - current_system
+    - progress_bar
+    + __init__()
+    + initialize_manager()
+    + initialize_ui()
+    + initialize_window()
+    + set_main_widgets()
+}
+
+class SettingsManager {
+    + initialize_settings()
+    + get_settings(): dict
+}
+
+class DataManager {
+    + initialize_database()
+    + get_database(): object
+}
+
+class VisionPresenter {
+    - model: VisionModel
+    - colpaliVLMModel : ColPaliVLMModel
+}
+
+class QStackedWidget {
+    + addWidget(widget)
+}
+class MainWidgetIndex {
+    + VISION_WIDGET
+}
+
+class VisionModel {
+    + thread_started_signal
+    + thread_finished_signal
+    + response_signal
+    + response_finished_signal
+    + send_user_input()
+    + handle_thread_finished()
+    + force_stop()
+}
+
+class ColPaliVLMModel {
+    + thread_started_signal: pyqtSignal
+    + thread_finished_signal: pyqtSignal
+    + colpali_rag_signal: pyqtSignal
+    + file_index_error_signal: pyqtSignal
+    + file_index_finished_signal: pyqtSignal
+    + indexing_files()
+    + handle_thread_finished()
+    + handle_colpali_rag()
+    + get_colpali_search_result()
+    + force_stop()
+}
+
+MainWindow --> VisionPresenter
+MainWindow --> SettingsManager
+MainWindow --> DataManager
+MainWindow --> QStackedWidget
+MainWindow --> MainWidgetIndex
+VisionPresenter --> VisionModel
+VisionPresenter --> ColPaliVLMModel
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+class ColPaliVLMModel {
+    +thread_started_signal: pyqtSignal
+    +thread_finished_signal: pyqtSignal
+    +colpali_rag_signal: pyqtSignal
+    +file_index_error_signal: pyqtSignal
+    +file_index_finished_signal: pyqtSignal
+    +indexing_files()
+    +handle_thread_finished()
+    +handle_colpali_rag()
+    +get_colpali_search_result()
+    +force_stop()
+}
+
+class ColPaliThread {
+    +colpali_rag_signal: pyqtSignal
+    +file_index_error_signal: pyqtSignal
+    +file_index_finished_signal: pyqtSignal
+    +run()
+    +set_force_stop()
+    +finish_run()
+}
+
+ColPaliVLMModel --> ColPaliThread
+
+@enduml
