@@ -102,7 +102,7 @@ python main.py
 
 아래 두가지 방법 중 하나를 선택해서 다운로드 합니다.
 
-1) 허깅 페이스 [vidore/colpali-v1.2](vidore/colpali-v1.2) 에서 다운로드 툴을 사용해서 다운로드 합니다. 
+1) 허깅 페이스 [vidore/colpali-v1.2](https://huggingface.co/vidore/colpali-v1.2) 에서 다운로드 툴을 사용해서 다운로드 합니다. 
 2) download_model/download_colpali_model.ipynb 주피터 노트북 파일을 열고 다운로드 합니다.
 
 ## PyTorch 설치

@@ -103,7 +103,7 @@ The total file size to be downloaded exceeds 5GB. Depending on your current netw
 
 Choose one of the two methods below to download:
 
-1) Use the download tool from Hugging Face [vidore/colpali-v1.2](vidore/colpali-v1.2) to download.
+1) Use the download tool from Hugging Face [vidore/colpali-v1.2](https://huggingface.co/vidore/colpali-v1.2) to download.
 2) Open the Jupyter notebook file download_model/download_colpali_model.ipynb and download from there.
 
 ## PyTorch Installation
