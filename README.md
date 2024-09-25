@@ -130,7 +130,20 @@ Please refer to the Utility.get_torch_device method in the util folder for more 
 ![mycolpali_first_run_1](https://github.com/user-attachments/assets/5652b8f6-6c76-4ad6-8120-3cc4089fb576)
 
 
-* Question/Answer 
+## Question/Answer 
+
+The document referenced in the question/answer below is the [Data and AI Trends Report 2024](https://services.google.com/fh/files/misc/data_ai_trends_report.pdf).
+
+It took 242 seconds to index this document, which contains 44 pages filled with text, graphics, and images.
+
+Here are the system specifications used for this test:
+- CPU: Ryzen 7 7800X3D
+- RAM: 64GB DDR5 Corsair 6000MT/s
+- GPU: Nvidia GeForce RTX 4070 Ti Super - 16GB VRAM
+- CUDA: 12.1
+
+![ai_trend_report_44pages](https://github.com/user-attachments/assets/e1e6b773-5189-43f3-aee2-9642eac3238e)
+
 1) Engish Q/A - 1
 
 ![mycolpali_eng_qa_1](https://github.com/user-attachments/assets/edd694cd-dc8b-478a-a833-e6e63241c55d)
