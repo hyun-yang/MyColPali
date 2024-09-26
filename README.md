@@ -134,7 +134,7 @@ This is the system information used for this test.
 - GPU : Nvidia GeForce RTX 4070 Ti Super - 16GB VRAM
 - CUDA : 12.1
 
-### 1) ColPali  Efficient Document Retrieval with Vision Language Models 질문/답변
+### 1) ColPali  Efficient Document Retrieval with Vision Language Models Question/Answer
 
 The document referenced in the question/answer below is the [ColPali: Efficient Document Retrieval with Vision Language Models](https://arxiv.org/abs/2407.01449).
 
@@ -247,6 +247,7 @@ Korean Questions
 2) AI를 사용해서 데이터 통합을 하려고 하는 기업의 비율은 얼마나 될까?
 3) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업은 비율은 얼마나 될까?
 4) RAG가 어떤 기술이고 어떻게 활용할 수 있어?
+
 
 
 1) Explain Top 5 trends.

@@ -248,6 +248,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 4) RAG가 어떤 기술이고 어떻게 활용할 수 있어?
 
 
+
 1) Explain Top 5 trends.
 
 ![mycolpali_eng_qa_1](https://github.com/user-attachments/assets/edd694cd-dc8b-478a-a833-e6e63241c55d)
