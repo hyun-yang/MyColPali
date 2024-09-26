@@ -146,7 +146,7 @@ This document is 20 pages long and includes text, graphs, and images.
 
 ![colpai_pdf_time](https://github.com/user-attachments/assets/62d9f81f-2405-4f6e-9eeb-2d9c3fa448de)
 
-English Questions
+### English Questions
 1) Summarize this document.
 2) What is the purpose of the ViDoRe benchmark?
 3) Why is the ColPali model superior to existing document retrieval systems?
@@ -158,9 +158,9 @@ English Questions
 9) How has the indexing speed of the ColPali model been improved?
 10) What methods are used to reduce the memory usage of the ColPali model?
 
-When answering the question "What evaluation metrics does the ViDoRe benchmark use?", please note that the quality of response differs when answering to using 5 images versus 10 images.
+*When answering the question "What evaluation metrics does the ViDoRe benchmark use?", please note that the quality of response differs when answering to using 5 images versus 10 images.*
 
-Korean Questions
+### Korean Questions
 1) 이 문서를 요약해주세요.
 2) ViDoRe 벤치마크의 목적은 무엇인가요?
 3) ColPali 모델이 기존 문서 검색 시스템보다 우수한 이유는 무엇인가요?
@@ -237,12 +237,12 @@ This report is 44 pages long and includes text, graphs, and images.
 
 ![ai_trend_report_44pages](https://github.com/user-attachments/assets/e1e6b773-5189-43f3-aee2-9642eac3238e)
 
-English Questions
+### English Questions
 1) Explain the Top 5 trends.
 2) What is RAG, and how can it be utilized?
 3) Explain why we should learn AI.
 
-Korean Questions
+### Korean Questions
 1) 우리가 AI를 배워야  하는 이유를 설명해줘.
 2) AI를 사용해서 데이터 통합을 하려고 하는 기업의 비율은 얼마나 될까?
 3) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업은 비율은 얼마나 될까?

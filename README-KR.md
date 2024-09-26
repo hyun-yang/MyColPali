@@ -145,7 +145,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 ![colpai_pdf_time](https://github.com/user-attachments/assets/62d9f81f-2405-4f6e-9eeb-2d9c3fa448de)
 
-영문 질문
+### 영문 질문
 1) Summarize this document.
 2) What is the purpose of the ViDoRe benchmark?
 3) Why is the ColPali model superior to existing document retrieval systems?
@@ -157,9 +157,9 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 9) How has the indexing speed of the ColPali model been improved?
 10) What methods are used to reduce the memory usage of the ColPali model?
 
-이 중에서 What evaluation metrics does the ViDoRe benchmark use? 질문에 대해서 답변할 때, 이미지 5개를 참고할 때 와 10개를 참고할 때 답변의 수준이 다르다는 걸 확인하세요.
+*이 중에서 What evaluation metrics does the ViDoRe benchmark use? 질문에 대해서 답변할 때, 이미지 5개를 참고할 때 와 10개를 참고할 때 답변의 수준이 다르다는 걸 확인하세요.*
 
-한글 질문
+### 한글 질문
 1) 이 문서를 요약해주세요.
 2) ViDoRe 벤치마크의 목적은 무엇인가요?
 3) ColPali 모델이 기존 문서 검색 시스템보다 우수한 이유는 무엇인가요?
@@ -236,12 +236,12 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 ![ai_trend_report_44pages](https://github.com/user-attachments/assets/e1e6b773-5189-43f3-aee2-9642eac3238e)
 
-영문 질문
+### 영문 질문
 1) Explain Top 5 trends.
 2) What is RAG, and how can it be utilized?
 3) Explain why we should learn AI.
 
-한글 질문
+### 한글 질문
 1) 우리가 AI를 배워야  하는 이유를 설명해줘.
 2) AI를 사용해서 데이터 통합을 하려고 하는 기업의 비율은 얼마나 될까?
 3) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업은 비율은 얼마나 될까?
