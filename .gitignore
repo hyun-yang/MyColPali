@@ -160,3 +160,23 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+/.byaldi/AIReport2Pages/collection/0.json.gz
+/.byaldi/AIReport2Pages/embeddings/embeddings_0.pt
+/.byaldi/AIReport2Pages/doc_ids_to_file_names.json.gz
+/.byaldi/AIReport2Pages/embed_id_to_doc_id.json.gz
+/.byaldi/AIReport2Pages/index_config.json.gz
+/.byaldi/AIReport2Pages/metadata.json.gz
+/.byaldi/ColPali/collection/0.json.gz
+/.byaldi/ColPali/embeddings/embeddings_0.pt
+/.byaldi/ColPali/doc_ids_to_file_names.json.gz
+/.byaldi/ColPali/embed_id_to_doc_id.json.gz
+/.byaldi/ColPali/index_config.json.gz
+/.byaldi/ColPali/metadata.json.gz
+/.byaldi/Top9-RAG/collection/0.json.gz
+/.byaldi/Top9-RAG/embeddings/embeddings_0.pt
+/.byaldi/Top9-RAG/doc_ids_to_file_names.json.gz
+/.byaldi/Top9-RAG/embed_id_to_doc_id.json.gz
+/.byaldi/Top9-RAG/index_config.json.gz
+/.byaldi/Top9-RAG/metadata.json.gz
+/mycolpali.db
+/settings.ini
