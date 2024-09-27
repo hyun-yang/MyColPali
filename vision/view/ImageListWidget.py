@@ -1,10 +1,13 @@
 import re
+from shutil import copy2
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont, QIcon
-from PyQt6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QPushButton, QApplication
+from PyQt6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QPushButton, QApplication, QFileDialog, \
+    QMessageBox
 
 from util.ChatType import ChatType
+from util.Constants import UI
 from util.Utility import Utility
 from vision.view.ThumbnailListWidget import ThumbnailListWidget
 
@@ -106,8 +109,12 @@ class ImageListWidget(QWidget):
         self.model_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
 
         # Create Buttons
-        copy_button = QPushButton(QIcon(Utility.get_icon_path('ico', 'card--plus.png')), "")
+        copy_button = QPushButton(QIcon(Utility.get_icon_path('ico', 'card--plus.png')), UI.COPY_TEXT)
         copy_button.clicked.connect(lambda: QApplication.clipboard().setText(self.get_original_text()))
+
+        # Save Button
+        save_button = QPushButton(QIcon(Utility.get_icon_path('ico', 'disk--plus.png')), UI.SAVE_IMAGES)
+        save_button.clicked.connect(self.save_image)
 
         # Create layouts for label and buttons
         model_label_layout = QHBoxLayout()
@@ -117,6 +124,7 @@ class ImageListWidget(QWidget):
         # Button layout
         button_layout = QHBoxLayout()
         button_layout.addWidget(copy_button)
+        button_layout.addWidget(save_button)
         button_layout.setAlignment(Qt.AlignmentFlag.AlignRight)
 
         # Add both layouts to the top layout
@@ -154,3 +162,13 @@ class ImageListWidget(QWidget):
 
     def show_original_text(self):
         self.user_text.setText(self.get_original_text())
+
+    def save_image(self):
+        dest_dir = QFileDialog.getExistingDirectory(self, UI.SELECT_FOLDER)
+        if dest_dir:
+            try:
+                for file_path in self.file_list:
+                    copy2(file_path, dest_dir)
+                QMessageBox.information(self, UI.SUCCESS, UI.FILE_COPY_SUCCESS)
+            except Exception as e:
+                QMessageBox.critical(self, UI.ERROR, f"{UI.FILE_COPY_ERROR} {str(e)}")

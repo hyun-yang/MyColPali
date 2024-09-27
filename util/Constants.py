@@ -103,6 +103,10 @@ class UI:
     RELOAD_ALL = "Reload All"
     OK = "Ok"
     CANCEL = "Cancel"
+    SUCCESS = "Success"
+    ERROR = "Error"
+    COPY_TEXT = "Copy Text"
+    SAVE_IMAGES = "Save Images"
 
     IMAGE_FILTER = "Images (*.png)"
     IMAGE_PNG_EXTENSION = ".png"
@@ -149,8 +153,9 @@ class UI:
     FILE_NOT_EXIST = "File does not exist: "
     MEDIA_NOT_LOADED = "Media is not loaded yet."
 
-    AUDIO_SELECT_FOLDER = "Select Folder"
-    AUDIO_SAVE = "Save Audio"
+    SELECT_FOLDER = "Select Folder"
+    FILE_COPY_SUCCESS = "Files copied successfully!"
+    FILE_COPY_ERROR = "An error occurred: "
 
     UNSUPPORTED_FILE_TYPE = "Unsupported file type"
 

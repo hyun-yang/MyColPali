@@ -24,6 +24,7 @@ class VisionView(QWidget):
     submitted_prompt_signal = pyqtSignal(str)
     stop_signal = pyqtSignal()
     current_llm_signal = pyqtSignal(str)
+    reload_chat_detail_signal = pyqtSignal(int)
 
     def __init__(self, model):
         super().__init__()
@@ -43,6 +44,9 @@ class VisionView(QWidget):
 
         self.clear_all_button = QPushButton(QIcon(Utility.get_icon_path('ico', 'bin.png')), UI.CLEAR_ALL)
         self.clear_all_button.clicked.connect(lambda: self.clear_all())
+
+        self.reload_button = QPushButton(QIcon(Utility.get_icon_path('ico', 'arrow-circle.png')), UI.RELOAD_ALL)
+        self.reload_button.clicked.connect(lambda: self.reload_chat_detail_signal.emit(-1))
 
         self.search_text = PromptTextEdit()
         self.search_text.submitted_signal.connect(self.search)
@@ -65,6 +69,7 @@ class VisionView(QWidget):
         button_layout.addWidget(self.prev_button)
         button_layout.addWidget(self.next_button)
         button_layout.addWidget(self.clear_all_button)
+        button_layout.addWidget(self.reload_button)
         button_layout.setAlignment(Qt.AlignmentFlag.AlignRight)
 
         # Add the button layout to the result layout

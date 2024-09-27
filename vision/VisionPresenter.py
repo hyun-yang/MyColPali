@@ -43,6 +43,7 @@ class VisionPresenter(QWidget):
         self.visionView.submitted_prompt_signal.connect(self.submit)
         self.visionView.stop_signal.connect(self.visionModel.force_stop)
         self.visionView.current_llm_signal.connect(self.set_current_llm_signal)
+        self.visionView.reload_chat_detail_signal.connect(self.show_vision_detail)
 
         self.visionView.vision_history.new_vision_signal.connect(self.create_new_vision)
         self.visionView.vision_history.delete_vision_signal.connect(self.confirm_delete_vision)
@@ -70,7 +71,7 @@ class VisionPresenter(QWidget):
 
     def initialize_vision_history(self):
         self.vision_list = self.visionView.vision_history.vision_list
-        self.vision_list.vision_id_signal.connect(self.show_vision_detail)
+        self.vision_list.vision_id_signal.connect(self.get_vision_detail)
 
     def set_vision_main_id(self, vision_main_id):
         self.vision_main_id = vision_main_id
@@ -138,27 +139,33 @@ class VisionPresenter(QWidget):
         self.visionViewModel.filter_by_title(text)
 
     def show_vision_detail(self, id):
-        if id != self.vision_main_id:
+        if id == -1:
+            self.get_vision_detail(self.vision_main_id)
+        elif id != self.vision_main_id:
             self.vision_main_id = id
-            self.view.clear_all()
-            self.view.reset_search_bar()
-            vision_detail_list = self._database.get_all_vision_details_list(id)
-            for vision_detail in vision_detail_list:
-                if vision_detail['vision_type'] == ChatType.HUMAN.value:
-                    vision_detail_id = f"{Constants.VISION_DETAIL_TABLE_ID_NAME}{id}_{vision_detail['id']}"
-                    vision_detail_file_list = self._database.get_all_vision_details_file_list(vision_detail_id)
-                    file_list = []
-                    for vision_detail_file in vision_detail_file_list:
-                        file_list.append(Utility.create_temp_file(vision_detail_file['vision_detail_file_data'],
-                                                                  Constants.VISION_IMAGE_EXTENSION, True))
+            self.get_vision_detail(self.vision_main_id)
 
-                    self.view.add_user_question(ChatType.HUMAN, vision_detail['vision_text'], file_list)
-                else:
-                    self.view.add_ai_answer(ChatType.AI, vision_detail['vision_text'],
-                                            Constants.MODEL_PREFIX + vision_detail['vision_model'])
-                    self.view.get_last_ai_widget().set_model_name(
-                        Constants.MODEL_PREFIX + vision_detail['vision_model']
-                        + Constants.RESPONSE_TIME + format(float(vision_detail['elapsed_time']), ".2f"))
+    def get_vision_detail(self, id):
+        self.vision_main_id = id
+        self.view.clear_all()
+        self.view.reset_search_bar()
+        vision_detail_list = self._database.get_all_vision_details_list(id)
+        for vision_detail in vision_detail_list:
+            if vision_detail['vision_type'] == ChatType.HUMAN.value:
+                vision_detail_id = f"{Constants.VISION_DETAIL_TABLE_ID_NAME}{id}_{vision_detail['id']}"
+                vision_detail_file_list = self._database.get_all_vision_details_file_list(vision_detail_id)
+                file_list = []
+                for vision_detail_file in vision_detail_file_list:
+                    file_list.append(Utility.create_temp_file(vision_detail_file['vision_detail_file_data'],
+                                                              Constants.VISION_IMAGE_EXTENSION, True))
+
+                self.view.add_user_question(ChatType.HUMAN, vision_detail['vision_text'], file_list)
+            else:
+                self.view.add_ai_answer(ChatType.AI, vision_detail['vision_text'],
+                                        Constants.MODEL_PREFIX + vision_detail['vision_model'])
+                self.view.get_last_ai_widget().set_model_name(
+                    Constants.MODEL_PREFIX + vision_detail['vision_model']
+                    + Constants.RESPONSE_TIME + format(float(vision_detail['elapsed_time']), ".2f"))
 
     def delete_vision(self, index):
         self.visionViewModel.remove_vision(index)
