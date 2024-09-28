@@ -273,7 +273,8 @@ class VisionView(QWidget):
         storeCollectionWithIndexCheckbox.setChecked(
             (Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="store_collection", default="True",
                                         save=True)) == "True")
-        storeCollectionWithIndexCheckbox.toggled.connect(lambda value: self.store_collection_with_index_changed(value, name))
+        storeCollectionWithIndexCheckbox.toggled.connect(
+            lambda value: self.store_collection_with_index_changed(value, name))
         storeCollectionWithIndexCheckbox.setChecked(True)
         storeCollectionWithIndexCheckbox.setEnabled(False)
         colpaliLayout.addRow('Store Collection With Index', storeCollectionWithIndexCheckbox)
@@ -482,6 +483,7 @@ class VisionView(QWidget):
             'verbose': verbose,
             'store_collection_with_index': store_collection_with_index,
             'overwrite': overwrite,
+            'device': Utility.get_torch_device()
         }
         return args
 

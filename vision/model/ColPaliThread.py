@@ -4,7 +4,6 @@ from PyQt6.QtCore import QThread, pyqtSignal
 from byaldi import RAGMultiModalModel
 
 from util.Constants import Constants
-from util.Utility import Utility
 
 
 class ColPaliThread(QThread):
@@ -21,13 +20,14 @@ class ColPaliThread(QThread):
         self.store_collection_with_index = args['store_collection_with_index']
         self.overwrite = args['overwrite']
         self.input_file_path = args['input_file_path']
+        self.device = args['device']
         self.force_stop = False
 
     def run(self):
         self.start_time = time.time()
         try:
             self.rag = RAGMultiModalModel.from_pretrained(self.model_name, verbose=self.verbose,
-                                                          device=Utility.get_torch_device())
+                                                          device=self.device)
             self.rag.index(
                 input_path=self.input_file_path,
                 index_name=self.index_name,

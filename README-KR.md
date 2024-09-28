@@ -171,6 +171,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 9) ColPali 모델의 인덱싱 속도는 어떻게 개선되었나요?
 10) ColPali 모델의 메모리 사용량을 줄이기 위한 방법은 무엇인가요?
 
+### 질문/답변 결과
 
 1) Summarize this document.
 
@@ -244,10 +245,10 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 ### 한글 질문
 1) 우리가 AI를 배워야  하는 이유를 설명해줘.
 2) AI를 사용해서 데이터 통합을 하려고 하는 기업의 비율은 얼마나 될까?
-3) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업은 비율은 얼마나 될까?
+3) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업의 비율은 얼마나 될까?
 4) RAG가 어떤 기술이고 어떻게 활용할 수 있어?
 
-
+### 질문/답변 결과
 
 1) Explain Top 5 trends.
 
@@ -261,16 +262,16 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 ![mycolpali_eng_qa_3](https://github.com/user-attachments/assets/80898ae2-d92f-495a-9ed4-4030b26f883a)
 
-1) 우리가 AI를 배워야  하는 이유를 설명해줘.
+4) 우리가 AI를 배워야  하는 이유를 설명해줘.
 
 ![mycolpali_han_qa_1](https://github.com/user-attachments/assets/75ce1539-c9be-412e-a949-22af86db063a)
 
-2) AI를 사용해서 데이터 통합을 하려고 하는 기업의 비율은 얼마나 될까?
-3) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업은 비율은 얼마나 될까?
+5) AI를 사용해서 데이터 통합을 하려고 하는 기업의 비율은 얼마나 될까?
+6) RAG와 같은 AI 모델을 활용한 기술을 사용하여 데이터베이스 관리에 사용하고 싶은 기업의 비율은 얼마나 될까?
 
 ![mycolpali_han_qa_2](https://github.com/user-attachments/assets/106abf31-fe95-4522-99f5-3242eaf1d8ed)
 
-4) RAG가 어떤 기술이고 어떻게 활용할 수 있어?
+7) RAG가 어떤 기술이고 어떻게 활용할 수 있어?
 
 ![mycolpali_han_qa_3](https://github.com/user-attachments/assets/9ebcdb8d-fef2-429b-950b-5cdfc8847621)
 
