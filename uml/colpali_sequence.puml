@@ -12,7 +12,7 @@ VisionPresenter -> ColPaliVLMModel: indexing_files(args)
 ColPaliVLMModel -> VisionPresenter: file_index_finished_signal
 User -> VisionView: submit(text)
 VisionView -> VisionPresenter: submitted_prompt_signal
-VisionPresenter -> ColPaliVLMModel: get_colpali_search_result(image_result, image_size)
+VisionPresenter -> ColPaliVLMModel: get_colpali_search_result(text, image_result, image_size)
 VisionPresenter -> Database: add_human_vision(text, file_list)
 VisionPresenter -> VisionView: update_ui_submit(ChatType.HUMAN, text. file_list)
 VisionPresenter -> VisionModel: send_user_input(args, llm)

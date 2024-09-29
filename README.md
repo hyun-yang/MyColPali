@@ -132,7 +132,7 @@ Please refer to the **Utility.get_torch_device** method in the util folder for m
 
 * Vision Presenter / ColPaliVLMModel Diagram
 
-![MyColPali-UML-2](https://github.com/user-attachments/assets/45f96a03-05f2-4c70-a9ee-5b7741a0f9ff)
+![MyColPali-UML-2](https://github.com/user-attachments/assets/ab066554-f05f-48ff-b186-8d659ade4656)
 
 
 ## ColPali Question/Answer Test

@@ -132,7 +132,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 * Vision Presenter / ColPaliVLMModel Diagram
 
-![MyColPali-UML-2](https://github.com/user-attachments/assets/45f96a03-05f2-4c70-a9ee-5b7741a0f9ff)
+![MyColPali-UML-2](https://github.com/user-attachments/assets/ab066554-f05f-48ff-b186-8d659ade4656)
 
 
 ## ColPali 질문/답변 테스트 
