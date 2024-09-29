@@ -124,6 +124,16 @@ Please refer to the **Utility.get_torch_device** method in the util folder for m
 * Setting
 ![mycolpali_first_run_1](https://github.com/user-attachments/assets/5652b8f6-6c76-4ad6-8120-3cc4089fb576)
 
+### UML Diagram
+
+* Main Class Diagram
+
+![MyColPali-UML-3](https://github.com/user-attachments/assets/4f14ec14-7d32-49ea-8cc1-537ac8a42d7d)
+
+* Vision Presenter / ColPaliVLMModel Diagram
+
+![MyColPali-UML-2](https://github.com/user-attachments/assets/45f96a03-05f2-4c70-a9ee-5b7741a0f9ff)
+
 
 ## ColPali Question/Answer Test
 
