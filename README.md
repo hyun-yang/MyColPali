@@ -128,7 +128,7 @@ Please refer to the **Utility.get_torch_device** method in the util folder for m
 
 * Main Class Diagram
 
-![MyColPali-UML-3](https://github.com/user-attachments/assets/4f14ec14-7d32-49ea-8cc1-537ac8a42d7d)
+![MyColPali-UML-3](https://github.com/user-attachments/assets/f967c0cd-88ca-411d-93af-23121f2d0e31)
 
 * Vision Presenter / ColPaliVLMModel Diagram
 

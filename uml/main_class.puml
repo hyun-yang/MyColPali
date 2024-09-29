@@ -24,7 +24,7 @@ class DataManager {
 }
 
 class VisionPresenter {
-    - model: VisionModel
+    - visionModel: VisionModel
     - colpaliVLMModel : ColPaliVLMModel
 }
 
