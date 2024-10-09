@@ -13,6 +13,15 @@
 
 ![colpali_archtecture](https://github.com/user-attachments/assets/d29d3c4a-959e-4c4d-ad48-01fcf253e513)
 
+## 업데이트
+- ColQwen2 모델 추가 [ColQwen2](https://huggingface.co/vidore/colqwen2-v0.1) 
+- 아래 명령어로 관련된 라이브러리를 업데이트 합니다. 
+
+```bash
+pip install -r requirements.txt
+```
+
+
 ## 필수 조건
 시작하기 전에 다음 요구 사항을 확인하세요:
 
@@ -95,15 +104,16 @@ python main.py
 python main.py
 ```
 
-## ColPali 모델 다운로드
+## ColPali/ColQwen2 모델 다운로드
 어플리케이션 사용하기 전에 ColPali 모델을 미리 다운로드 합니다. 
 
-다운로드 할 전체 파일 크기가 5GB가 넘습니다. 현재 사용하고 있는 네트워크 속도에 따라 시간이 걸릴 수도 있습니다.
+다운로드 할 전체 파일 크기가 5GB(ColPali), 8GB(ColQwen2)가 넘습니다. 현재 사용하고 있는 네트워크 속도에 따라 시간이 걸릴 수도 있습니다.
 
 아래 두가지 방법 중 하나를 선택해서 다운로드 합니다.
 
 1) 허깅 페이스 [vidore/colpali-v1.2](https://huggingface.co/vidore/colpali-v1.2) 에서 다운로드 툴을 사용해서 다운로드 합니다. 
-2) **download_model/download_colpali_model.ipynb** 주피터 노트북 파일을 열고 다운로드 합니다.
+2) 허깅 페이스 [vidore/colqwen2-v0.1](https://huggingface.co/vidore/colqwen2-v0.1) 에서 다운로드 툴을 사용해서 다운로드 합니다.
+3) **download_model/download_colpali_model.ipynb** 주피터 노트북 파일을 열고 다운로드 합니다.
 
 ## PyTorch 설치
 

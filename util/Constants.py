@@ -36,6 +36,9 @@ class Constants:
     RESPONSE_FORMAT_B64_JSON = "b64_json"
     SCALE_RATIO = 1.1
 
+    # Colpali Model List
+    COLPALI_MODEL_LIST = ["vidore/colpali-v1.2", "vidore/colqwen2-v0.1"]
+
     # Vision
     VISION_MODEL_LIST = ["gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
 
@@ -185,6 +188,11 @@ class UI:
                 margin: 1px;
             }
             """
+
+    FILE_INDEXING_FINISHED = "Indexing file has been finished!"
+    FILE_INDEXING = "File Indexing"
+    ENTER_YOUR_PROMPT = "Enter your prompt"
+    RUN_FILE_INDEXING = "Run 'File Indexing' first"
 
     def __setattr__(self, name, value):
         if name in self.__dict__:

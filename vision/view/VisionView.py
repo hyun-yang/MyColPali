@@ -246,6 +246,21 @@ class VisionView(QWidget):
         tabWidget.setObjectName(name)
         layoutMain = QVBoxLayout()
 
+        # ColPali Model List
+        colPaliModelGroup = QGroupBox("ColPali Model")
+        colPaliModelLayout = QFormLayout()
+        colPaliModelLabel = QLabel("ColPali Model List")
+        colPaliModelList = QComboBox()
+        colPaliModelList.setObjectName("ColPali_ModelList")
+        colPaliModelList.clear()
+
+        self.set_colpali_model_list(colPaliModelList, name)
+
+        colPaliModelLayout.addRow(colPaliModelLabel)
+        colPaliModelLayout.addRow(colPaliModelList)
+        colPaliModelGroup.setLayout(colPaliModelLayout)
+        layoutMain.addWidget(colPaliModelGroup)
+
         groupColPaliName = QGroupBox(f"{UI.COLPALI} Setting")
         colpaliLayout = QFormLayout()
         colpaliChatLabel = QLabel("ColPali Index Name")
@@ -468,8 +483,7 @@ class VisionView(QWidget):
 
     def create_colpali_args(self, llm):
 
-        model_name = Utility.get_settings_value(section=f"{llm}_ColPali_Parameter", prop="model_name",
-                                                default="vidore/colpali-v1.2", save=True)
+        model_name = self.findChild(QComboBox, "ColPali_ModelList").currentText()
 
         store_collection_with_index = self.findChild(QCheckBox,
                                                      f'{llm}_storeCollectionWithIndexCheckbox').isChecked()
@@ -489,6 +503,9 @@ class VisionView(QWidget):
 
     def create_args_openai(self, text, llm, file_list):
         api_key = self._settings.value(f'AI_Provider/{llm}')
+
+        colpali_model_name = self.findChild(QComboBox, "ColPali_ModelList").currentText()
+
         model = self.findChild(QComboBox, f'{llm}_ModelList').currentText()
 
         max_tokens_spin_box = self.findChild(CheckSpinBox,
@@ -535,6 +552,7 @@ class VisionView(QWidget):
         args = {
             'api_key': api_key,
             'ai_arg': ai_arg,
+            'colpali_model_name': colpali_model_name,
         }
 
         return args
@@ -548,6 +566,16 @@ class VisionView(QWidget):
 
     def model_list_changed(self, model, llm):
         self._settings.setValue(f"{llm}_Vision_Parameter/vision_model", model)
+
+    def set_colpali_model_list(self, modelList, name):
+        modelList.addItems(Constants.COLPALI_MODEL_LIST)
+        current_model = Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="model_name",
+                                                   default="vidore/colpali-v1.2", save=True)
+        modelList.setCurrentText(current_model)
+        modelList.currentTextChanged.connect(lambda current_text: self.colpali_model_list_changed(current_text, name))
+
+    def colpali_model_list_changed(self, model, llm):
+        self._settings.setValue(f"{llm}_ColPali_Parameter/model_name", model)
 
     def submit_file(self, llm):
         args = self.create_colpali_args(llm)

@@ -16,6 +16,7 @@ class OpenAIVisionThread(QThread):
         self.openai_arg = args['ai_arg']
         self.openai = OpenAI(api_key=args['api_key'])
         self.stream = self.openai_arg['stream']
+        self.colpali_model_name = args['colpali_model_name']
         self.force_stop = False
         self.start_time = None
 
@@ -39,17 +40,17 @@ class OpenAIVisionThread(QThread):
 
     def handle_response(self, response):
         if self.force_stop:
-            self.finish_run(response.model, Constants.FORCE_STOP, self.stream)
+            self.finish_run(response.model + "+" + self.colpali_model_name, Constants.FORCE_STOP, self.stream)
         else:
             result = response.choices[0].message.content
             finish_reason = response.choices[0].finish_reason
             self.response_signal.emit(result, self.stream)
-            self.finish_run(response.model, finish_reason, self.stream)
+            self.finish_run(response.model + "+" + self.colpali_model_name, finish_reason, self.stream)
 
     def handle_stream_response(self, response):
         for chunk in response:
             if self.force_stop:
-                self.finish_run(chunk.model, Constants.FORCE_STOP, self.stream)
+                self.finish_run(chunk.model + "+" + self.colpali_model_name, Constants.FORCE_STOP, self.stream)
                 break
             else:
                 result = chunk.choices[0].delta.content
@@ -58,7 +59,7 @@ class OpenAIVisionThread(QThread):
                 else:
                     finish_reason = chunk.choices[0].finish_reason
                     if finish_reason is not None:
-                        self.finish_run(chunk.model, finish_reason, self.stream)
+                        self.finish_run(chunk.model + "+" + self.colpali_model_name, finish_reason, self.stream)
 
     def finish_run(self, model, finish_reason, stream):
         end_time = time.time()

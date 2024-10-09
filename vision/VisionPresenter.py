@@ -191,7 +191,7 @@ class VisionPresenter(QWidget):
     @pyqtSlot(str, str, float)
     def handle_file_index_finished_signal(self, model, finish_reason, elapsed_time):
         self.colpali_rag_ready = True
-        QMessageBox.information(self, "File Indexing Finished", "Enter your prompt")
+        QMessageBox.information(self, UI.FILE_INDEXING_FINISHED, UI.ENTER_YOUR_PROMPT)
 
     @pyqtSlot(object)
     def indexing_file(self, args):
@@ -207,4 +207,4 @@ class VisionPresenter(QWidget):
             self.visionView.update_ui_submit(ChatType.HUMAN, text, file_list)
             self.visionModel.send_user_input(self.visionView.create_args(text, self.llm, file_list), self.llm)
         else:
-            QMessageBox.warning(self, "File Indexing", "Run 'File Indexing' first")
+            QMessageBox.warning(self, UI.FILE_INDEXING, UI.RUN_FILE_INDEXING)
