@@ -271,7 +271,7 @@ class VisionView(QWidget):
         colpaliLayout.addRow(self.colpaliChatName)
 
         Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="model_name",
-                                   default="vidore/colpali-v1.2", save=True)
+                                   default="vidore/colpali-v1.3", save=True)
 
         overwriteCheckbox = QCheckBox()
         overwriteCheckbox.setObjectName(f"{name}_overwriteCheckbox")
@@ -570,7 +570,7 @@ class VisionView(QWidget):
     def set_colpali_model_list(self, modelList, name):
         modelList.addItems(Constants.COLPALI_MODEL_LIST)
         current_model = Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="model_name",
-                                                   default="vidore/colpali-v1.2", save=True)
+                                                   default="vidore/colpali-v1.3", save=True)
         modelList.setCurrentText(current_model)
         modelList.currentTextChanged.connect(lambda current_text: self.colpali_model_list_changed(current_text, name))
 
