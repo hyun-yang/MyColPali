@@ -37,7 +37,7 @@ class Constants:
     SCALE_RATIO = 1.1
 
     # Colpali Model List
-    COLPALI_MODEL_LIST = ["vidore/colpali-v1.2", "vidore/colqwen2-v0.1"]
+    COLPALI_MODEL_LIST = ["vidore/colpali-v1.3", "vidore/colqwen2-v1.0"]
 
     # Vision
     VISION_MODEL_LIST = ["gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
@@ -56,7 +56,7 @@ class Constants:
 
     ABOUT_TEXT = (
         "<b>MyColPali</b><br>"
-        "Version: 1.0.0<br><br>"
+        "Version: 1.1.0<br><br>"
         "Author: Hayden Yang(양 현석)<br>"
         "Github: <a href='https://github.com/hyun-yang'>https://github.com/hyun-yang</a><br><br>"
         "Contact: iamyhs@gmail.com<br>"

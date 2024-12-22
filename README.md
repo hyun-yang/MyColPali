@@ -14,7 +14,7 @@ This application utilizes the ColPali vision language model and OpenAI capabilit
 ![colpali_archtecture](https://github.com/user-attachments/assets/d29d3c4a-959e-4c4d-ad48-01fcf253e513)
 
 ## Updates
-- Added [ColQwen2](https://huggingface.co/vidore/colqwen2-v0.1) model 
+- Added [ColQwen2](https://huggingface.co/vidore/colqwen2-v1.0) model 
 - Need to update the dependency library by running following command 
 
 ```bash
@@ -112,8 +112,8 @@ The total file size to be downloaded over 5GB(ColPali), 8GB(ColQwen2). Depending
 
 Choose one of the two methods below to download:
 
-1) Use the download tool from Hugging Face [vidore/colpali-v1.2](https://huggingface.co/vidore/colpali-v1.2) to download.
-2) Use the download tool from Hugging Face [vidore/colqwen2-v0.1](https://huggingface.co/vidore/colqwen2-v0.1) to download.
+1) Use the download tool from Hugging Face [vidore/colpali-v1.3](https://huggingface.co/vidore/colpali-v1.3) to download.
+2) Use the download tool from Hugging Face [vidore/colqwen2-v1.0](https://huggingface.co/vidore/colqwen2-v1.0) to download.
 3) Open the Jupyter notebook file **download_model/download_colpali_model.ipynb** and run it.
 
 ## PyTorch Installation

@@ -14,7 +14,7 @@
 ![colpali_archtecture](https://github.com/user-attachments/assets/d29d3c4a-959e-4c4d-ad48-01fcf253e513)
 
 ## 업데이트
-- ColQwen2 모델 추가 [ColQwen2](https://huggingface.co/vidore/colqwen2-v0.1) 
+- ColQwen2 모델 추가 [ColQwen2](https://huggingface.co/vidore/colqwen2-v1.0) 
 - 아래 명령어로 관련된 라이브러리를 업데이트 합니다. 
 
 ```bash
@@ -111,8 +111,8 @@ python main.py
 
 아래 두가지 방법 중 하나를 선택해서 다운로드 합니다.
 
-1) 허깅 페이스 [vidore/colpali-v1.2](https://huggingface.co/vidore/colpali-v1.2) 에서 다운로드 툴을 사용해서 다운로드 합니다. 
-2) 허깅 페이스 [vidore/colqwen2-v0.1](https://huggingface.co/vidore/colqwen2-v0.1) 에서 다운로드 툴을 사용해서 다운로드 합니다.
+1) 허깅 페이스 [vidore/colpali-v1.3](https://huggingface.co/vidore/colpali-v1.3) 에서 다운로드 툴을 사용해서 다운로드 합니다. 
+2) 허깅 페이스 [vidore/colqwen2-v1.0](https://huggingface.co/vidore/colqwen2-v1.0) 에서 다운로드 툴을 사용해서 다운로드 합니다.
 3) **download_model/download_colpali_model.ipynb** 주피터 노트북 파일을 열고 다운로드 합니다.
 
 ## PyTorch 설치
