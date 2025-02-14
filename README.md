@@ -16,6 +16,7 @@ This application utilizes the ColPali vision language model and OpenAI capabilit
 ## Updates
 - Added [ColQwen2](https://huggingface.co/vidore/colqwen2-v1.0) model 
 - Need to update the dependency library by running following command 
+- Added 'Use Existing ColPali Index' feature
 
 ```bash
 pip install -r requirements.txt

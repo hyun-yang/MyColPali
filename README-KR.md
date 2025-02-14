@@ -16,6 +16,7 @@
 ## 업데이트
 - ColQwen2 모델 추가 [ColQwen2](https://huggingface.co/vidore/colqwen2-v1.0) 
 - 아래 명령어로 관련된 라이브러리를 업데이트 합니다. 
+- '이미 존재하는 ColPali 인덱스 사용' 기능 추가.
 
 ```bash
 pip install -r requirements.txt
