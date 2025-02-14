@@ -1,3 +1,4 @@
+import os
 from functools import partial
 
 from PyQt6.QtCore import Qt, pyqtSignal
@@ -25,6 +26,7 @@ class VisionView(QWidget):
     stop_signal = pyqtSignal()
     current_llm_signal = pyqtSignal(str)
     reload_chat_detail_signal = pyqtSignal(int)
+    use_existing_colpali_index = pyqtSignal(str)
 
     def __init__(self, model):
         super().__init__()
@@ -263,6 +265,20 @@ class VisionView(QWidget):
 
         groupColPaliName = QGroupBox(f"{UI.COLPALI} Setting")
         colpaliLayout = QFormLayout()
+
+        showExistingIndexCheckbox = QCheckBox()
+        showExistingIndexCheckbox.setObjectName(f"{name}_showExistingListCheckbox")
+        showExistingIndexCheckbox.toggled.connect(self.show_existing_index_list)
+        showExistingIndexCheckbox.setChecked(False)
+        colpaliLayout.addRow('Show Existing ColPali Index', showExistingIndexCheckbox)
+
+        # ColPaliList
+        self.existingIndexListWidget = QListWidget()
+        self.existingIndexListWidget.setObjectName(f"{name}_ExistingIndexList")
+        self.existingIndexListWidget.itemClicked.connect(self.show_selected_index_folder_name)
+        colpaliLayout.addRow(self.existingIndexListWidget)
+        self.existingIndexListWidget.setVisible(False)
+
         colpaliChatLabel = QLabel("ColPali Index Name")
         self.colpaliChatName = QLineEdit()
         self.colpaliChatName.setObjectName("ColPaliChatName")
@@ -276,22 +292,19 @@ class VisionView(QWidget):
         overwriteCheckbox = QCheckBox()
         overwriteCheckbox.setObjectName(f"{name}_overwriteCheckbox")
         overwriteCheckbox.setChecked(
-            (Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="overwrite", default="True",
+            (Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="overwrite", default="False",
                                         save=True)) == "True")
         overwriteCheckbox.toggled.connect(lambda value: self.overwrite_changed(value, name))
-        overwriteCheckbox.setChecked(True)
-        overwriteCheckbox.setEnabled(False)
         colpaliLayout.addRow('Overwrite', overwriteCheckbox)
 
         storeCollectionWithIndexCheckbox = QCheckBox()
         storeCollectionWithIndexCheckbox.setObjectName(f"{name}_storeCollectionWithIndexCheckbox")
         storeCollectionWithIndexCheckbox.setChecked(
-            (Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="store_collection", default="True",
+            (Utility.get_settings_value(section=f"{name}_ColPali_Parameter", prop="store_collection_with_index",
+                                        default="False",
                                         save=True)) == "True")
         storeCollectionWithIndexCheckbox.toggled.connect(
             lambda value: self.store_collection_with_index_changed(value, name))
-        storeCollectionWithIndexCheckbox.setChecked(True)
-        storeCollectionWithIndexCheckbox.setEnabled(False)
         colpaliLayout.addRow('Store Collection With Index', storeCollectionWithIndexCheckbox)
 
         kNearestSpinBox = QSpinBox()
@@ -424,6 +437,27 @@ class VisionView(QWidget):
         tabWidget.setLayout(layoutMain)
 
         return tabWidget
+
+    def show_selected_index_folder_name(self, item):
+        self.colpaliChatName.setText(item.text())
+        self.use_existing_colpali_index.emit(item.text())
+
+    def show_existing_index_list(self, checked):
+        self.existingIndexListWidget.setVisible(checked)
+
+        if checked:
+            self.existingIndexListWidget.clear()
+
+            current_dir = os.path.dirname(os.path.abspath('main.py'))
+            byaldi_dir = os.path.join(current_dir, '.byaldi')
+
+            if os.path.exists(byaldi_dir) and os.path.isdir(byaldi_dir):
+                subfolders = [f.name for f in os.scandir(byaldi_dir) if f.is_dir()]
+                for subfolder in subfolders:
+                    self.existingIndexListWidget.addItem(subfolder)
+            else:
+                self.existingIndexListWidget.addItem("No subfolders found or .byaldi directory does not exist.")
+
 
     def select_files(self, llm):
         fileListWidget = self.findChild(QListWidget, f"{llm}_FileList")

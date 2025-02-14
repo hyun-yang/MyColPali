@@ -39,6 +39,9 @@ class ColPaliVLMModel(QObject):
     def handle_colpali_rag(self, rag):
         self.colpali_rag = rag
 
+    def handle_colpali_rag_from_index(self, index_folder, args):
+        self.colpali_rag = RAGMultiModalModel.from_index(index_folder, verbose=args['verbose'], device=args['device'])
+
     def get_colpali_search_result(self, text, k_nearest, image_size):
         file_list = []
         colpali_search_results = self.colpali_rag.search(text, k=k_nearest)

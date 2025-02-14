@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QDialog, QMessageBox
 
 from util.ChatType import ChatType
 from util.ConfirmationDialog import ConfirmationDialog
-from util.Constants import Constants, UI
+from util.Constants import Constants, UI, AIProviderName
 from util.DataManager import DataManager
 from util.SettingsManager import SettingsManager
 from util.Utility import Utility
@@ -44,6 +44,7 @@ class VisionPresenter(QWidget):
         self.visionView.stop_signal.connect(self.visionModel.force_stop)
         self.visionView.current_llm_signal.connect(self.set_current_llm_signal)
         self.visionView.reload_chat_detail_signal.connect(self.show_vision_detail)
+        self.visionView.use_existing_colpali_index.connect(self.use_existing_index_folder)
 
         self.visionView.vision_history.new_vision_signal.connect(self.create_new_vision)
         self.visionView.vision_history.delete_vision_signal.connect(self.confirm_delete_vision)
@@ -196,6 +197,11 @@ class VisionPresenter(QWidget):
     @pyqtSlot(object)
     def indexing_file(self, args):
         self.colpaliVLMModel.indexing_files(args)
+
+    @pyqtSlot(str)
+    def use_existing_index_folder(self, index_folder):
+        self.colpali_rag_ready = True
+        self.colpaliVLMModel.handle_colpali_rag_from_index(index_folder, self.view.create_colpali_args(AIProviderName.OPENAI.value))
 
     @pyqtSlot(str)
     def submit(self, text):

@@ -301,6 +301,43 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 ![mycolpali_list](https://github.com/user-attachments/assets/1c0f5373-3752-48d5-9f87-4e658933acba)
 
 
+### 3) DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
+
+아래 질문 답변에 사용한 파일은 [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948) 입니다.
+
+이 리포트는 22페이지로 이루어져 있고, 글, 테이블, 그래프, 이미지가 함께 포함되어 있습니다.
+
+- 파일 인덱싱 시간 : 20초
+- 총 페이지 : 22 페이지
+- 파일 사이즈 : 1.2 mb
+
+![Image](https://github.com/user-attachments/assets/a5a3d487-872e-443d-82e4-18386de97199)
+
+### 영문 질문
+1. What is Aha Moment of DeepSeek-R1-Zero?
+2. What is the main goal of DeepSeek-R1 in terms of language model reasoning capabilities?   
+3. How does DeepSeek-R1 differ from DeepSeek-R1-Zero in terms of training methodology?
+4. What are the advantages of using cold start data in DeepSeek-R1?
+5. What challenges does DeepSeek-R1-Zero face, and how does DeepSeek-R1 address them?
+6. What role does reinforcement learning play in the development of DeepSeek-R1?
+7. How does the distillation process benefit smaller models in DeepSeek-R1?
+8. What future research directions are proposed for DeepSeek-R1?
+9. How does DeepSeek-R1 handle language mixing issues?
+10. What are the limitations of the current DeepSeek-R1 model as discussed in the document?
+
+
+1. What is Aha Moment of DeepSeek-R1-Zero
+![Image](https://github.com/user-attachments/assets/151fb0ea-c1d9-4104-86bb-8649cb6c8f28)
+
+
+2. What are the advantages of using cold start data in DeepSeek-R1?
+![Image](https://github.com/user-attachments/assets/74ad3794-1586-4524-a30a-388832a5191c)
+
+
+3. What role does reinforcement learning play in the development of DeepSeek-R1
+![Image](https://github.com/user-attachments/assets/b0847c6a-5616-49d4-8762-60cec8e9e911)
+
+
 ## 알아둘 점
 
 - Image Size 설정에서 크기를 선택하면, ColPali가 반환하는 이미지의 크기를 설정한 기준(가로/세로 중 긴 쪽)에 맞춰 조정합니다.

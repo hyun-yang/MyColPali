@@ -104,6 +104,12 @@ python main.py
 python main.py
 ```
 
+## Create executable file
+
+```bash
+pyinstaller --add-data "ico/*.svg:ico" --add-data "ico/*.png:ico" --add-data "splash/pyqt-small.png:splash" --icon="ico/app.ico" --windowed --onefile main.py
+```
+
 ## ColPali/ColQwen2 Model Download
 
 Make sure to download the ColPali/ColQwen2 model prior to using the application.
@@ -300,6 +306,44 @@ This report is 44 pages long and includes text, graphs, and images.
 * Question/Answer List
 
 ![mycolpali_list](https://github.com/user-attachments/assets/1c0f5373-3752-48d5-9f87-4e658933acba)
+
+
+### 3) DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
+
+The document referenced in the question/answer below is the [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948).
+
+This report is 22 pages long and includes text, tables, graphs and images.
+
+- File indexing time : 20 seconds
+- Total pages : 22 pages
+- File size : 1.2 mb
+
+![Image](https://github.com/user-attachments/assets/a5a3d487-872e-443d-82e4-18386de97199)
+
+### English Questions
+1. What is Aha Moment of DeepSeek-R1-Zero?
+2. What is the main goal of DeepSeek-R1 in terms of language model reasoning capabilities?   
+3. How does DeepSeek-R1 differ from DeepSeek-R1-Zero in terms of training methodology?
+4. What are the advantages of using cold start data in DeepSeek-R1?
+5. What challenges does DeepSeek-R1-Zero face, and how does DeepSeek-R1 address them?
+6. What role does reinforcement learning play in the development of DeepSeek-R1?
+7. How does the distillation process benefit smaller models in DeepSeek-R1?
+8. What future research directions are proposed for DeepSeek-R1?
+9. How does DeepSeek-R1 handle language mixing issues?
+10. What are the limitations of the current DeepSeek-R1 model as discussed in the document?
+
+
+1. What is Aha Moment of DeepSeek-R1-Zero
+![Image](https://github.com/user-attachments/assets/151fb0ea-c1d9-4104-86bb-8649cb6c8f28)
+
+
+2. What are the advantages of using cold start data in DeepSeek-R1?
+![Image](https://github.com/user-attachments/assets/74ad3794-1586-4524-a30a-388832a5191c)
+
+
+3. What role does reinforcement learning play in the development of DeepSeek-R1
+![Image](https://github.com/user-attachments/assets/b0847c6a-5616-49d4-8762-60cec8e9e911)
+
 
 ## Important Notes
 
