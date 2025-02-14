@@ -158,7 +158,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 아래 질문 답변에 사용한 파일은 [ColPali: Efficient Document Retrieval with Vision Language Models](https://arxiv.org/abs/2407.01449) 입니다.
 
-이 문서 20페이지로 이루어져 있고, 글, 그래프, 이미지가 함께 포함되어 있습니다.
+이 문서는 20페이지로 구성되어 있으며, 글, 그래프, 이미지가 함께 포함되어 있습니다.
 
 - 파일 인덱싱 시간 : 17초
 - 총 페이지 : 20 페이지
@@ -250,7 +250,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 아래 질문 답변에 사용한 파일은 [Data and AI Trends Report 2024](https://services.google.com/fh/files/misc/data_ai_trends_report.pdf) 입니다.
 
-이 리포트는 44페이지로 이루어져 있고, 글, 그래프, 이미지가 함께 포함되어 있습니다.
+이 리포트는 44페이지로 구성되어 있으며, 글, 그래프, 이미지가 함께 포함되어 있습니다.
 
 - 파일 인덱싱 시간 : 242초
 - 총 페이지 : 44 페이지
@@ -305,7 +305,7 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 
 아래 질문 답변에 사용한 파일은 [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948) 입니다.
 
-이 리포트는 22페이지로 이루어져 있고, 글, 테이블, 그래프, 이미지가 함께 포함되어 있습니다.
+이 문서는 22페이지로 구성되어 있으며, 글, 테이블, 그래프, 이미지가 함께 포함되어 있습니다.
 
 - 파일 인덱싱 시간 : 20초
 - 총 페이지 : 22 페이지
@@ -326,15 +326,15 @@ util 폴더 아래에 **Utility.get_torch_device** 메소드를 참고하세요.
 10. What are the limitations of the current DeepSeek-R1 model as discussed in the document?
 
 
-1. What is Aha Moment of DeepSeek-R1-Zero
+- What is Aha Moment of DeepSeek-R1-Zero
 ![Image](https://github.com/user-attachments/assets/151fb0ea-c1d9-4104-86bb-8649cb6c8f28)
 
 
-2. What are the advantages of using cold start data in DeepSeek-R1?
+- What are the advantages of using cold start data in DeepSeek-R1?
 ![Image](https://github.com/user-attachments/assets/74ad3794-1586-4524-a30a-388832a5191c)
 
 
-3. What role does reinforcement learning play in the development of DeepSeek-R1
+- What role does reinforcement learning play in the development of DeepSeek-R1
 ![Image](https://github.com/user-attachments/assets/b0847c6a-5616-49d4-8762-60cec8e9e911)
 
 

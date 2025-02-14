@@ -312,7 +312,7 @@ This report is 44 pages long and includes text, graphs, and images.
 
 The document referenced in the question/answer below is the [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948).
 
-This report is 22 pages long and includes text, tables, graphs and images.
+This document is 22 pages long and includes text, tables, graphs and images.
 
 - File indexing time : 20 seconds
 - Total pages : 22 pages
@@ -333,15 +333,15 @@ This report is 22 pages long and includes text, tables, graphs and images.
 10. What are the limitations of the current DeepSeek-R1 model as discussed in the document?
 
 
-1. What is Aha Moment of DeepSeek-R1-Zero
+- What is Aha Moment of DeepSeek-R1-Zero
 ![Image](https://github.com/user-attachments/assets/151fb0ea-c1d9-4104-86bb-8649cb6c8f28)
 
 
-2. What are the advantages of using cold start data in DeepSeek-R1?
+- What are the advantages of using cold start data in DeepSeek-R1?
 ![Image](https://github.com/user-attachments/assets/74ad3794-1586-4524-a30a-388832a5191c)
 
 
-3. What role does reinforcement learning play in the development of DeepSeek-R1
+- What role does reinforcement learning play in the development of DeepSeek-R1
 ![Image](https://github.com/user-attachments/assets/b0847c6a-5616-49d4-8762-60cec8e9e911)
 
 
